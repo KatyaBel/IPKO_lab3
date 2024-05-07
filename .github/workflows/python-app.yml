@@ -43,3 +43,10 @@ jobs:
       with:
         name: Pytest Report
         path: report
+    - name: Archive production
+      uses: actions/upload-artifact@v4
+      with:
+        name: src-without-markdown
+        path: |
+          src
+          !src/**/*.md
